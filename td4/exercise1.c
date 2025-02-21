@@ -12,6 +12,7 @@ int main(int argc, char * argv) {
   }
   x = atoi(argv[1]);
   printf("%.1f",F(x));
+  return 0;
 }
 double F(int x) {
   double X = (double)x;
