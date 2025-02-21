@@ -1,11 +1,17 @@
+#include<stdlib.h>
 #include <stdio.h>
 double F(int x);
-int main() {
+int main(int argc, char * argv) {
   int x = 0;
-  while (1) {
-    scanf("%d", &x);
-    printf("%.1f \n", F(x));
+  if (argc < 2) {
+    printf("too little arguments \n");
+    return 1;
+  } else if (argc > 2) {
+    printf("too many arguments \n");
+    return 2;
   }
+  x = atoi(argv[1]);
+  printf("%.1f",F(x));
 }
 double F(int x) {
   double X = (double)x;
